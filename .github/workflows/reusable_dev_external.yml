@@ -8,7 +8,7 @@ on:
         type: string
 
 jobs:
-  build:
+  dev_external:
     uses: ./.github/workflows/reusable_build.yml
     with:
       env: ${{ inputs.env }}
