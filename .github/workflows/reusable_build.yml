@@ -1,0 +1,14 @@
+name: reuable_build
+
+on:
+  workflow_call:
+    inputs:
+      env:
+        required: true
+        type: string
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.env }}

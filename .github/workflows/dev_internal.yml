@@ -1,0 +1,9 @@
+name: reusable_workflow_test
+on:
+  push:
+
+jobs:
+  caller:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      hoge: hoge

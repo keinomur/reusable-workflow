@@ -1,0 +1,14 @@
+name: Reusable workflow example
+
+on:
+  workflow_call:
+    inputs:
+      hoge:
+        required: true
+        type: string
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.hoge }}

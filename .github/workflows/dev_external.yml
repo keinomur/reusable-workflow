@@ -1,0 +1,14 @@
+name: reusable_workflow_test
+on:
+  push:
+
+jobs:
+  dev01:
+    uses: ./.github/workflows/reusable_dev_external.yml
+    with:
+      env: dev01
+
+  dev02:
+    uses: ./.github/workflows/reusable_dev_external.yml
+    with:
+      env: dev02

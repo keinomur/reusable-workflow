@@ -1,0 +1,14 @@
+name: reusable_dev_external
+
+on:
+  workflow_call:
+    inputs:
+      env:
+        required: true
+        type: string
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable_build.yml
+    with:
+      env: ${{ inputs.env }}
